@@ -16,11 +16,14 @@ class Perceptron(object):
             errors = 0
             # zip は、配列をまとめて扱えるっていうやつ
             for xi, target in zip(X, y):
+                print('--------------------------------------------------------')
+                print(xi)
                 # ココが実際の計算ポイント。
                 # xi（2つの実測値）から重み付け値を出して分類してみて、結果が -1-1 で -2 になったり、-1+1 で　0 になったりして、それに応じて 学習率をかけて 重み付けの変動幅を出して、それを使って重み付けを書き換えている。
                 update = self.eta * (target - self.predict(xi))
                 self.w_[1:] += update * xi
                 self.w_[0] += update
+                print(self.w_)
                 errors += int(update != 0.0)
             self.errors_.append(errors)
         return self
