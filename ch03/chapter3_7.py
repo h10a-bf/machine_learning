@@ -18,6 +18,5 @@ plt.xlabel('petal length [standardized]')
 plt.ylabel('petal width [standardized]')
 plt.legend(loc='upper left')
 plt.tight_layout()
-# plt.savefig('./figures/k_nearest_neighbors.png', dpi=300)
 plt.show()
 

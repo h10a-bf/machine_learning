@@ -16,6 +16,5 @@ plt.xlabel('petal length [standardized]')
 plt.ylabel('petal width [standardized]')
 plt.legend(loc='upper left')
 plt.tight_layout()
-# plt.savefig('./chapter_3_4_2_C_999999999999.png', dpi=300)
 plt.show()
 
